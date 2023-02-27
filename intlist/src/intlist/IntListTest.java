@@ -14,8 +14,16 @@ class IntListTest {
 		
 		myIntList.add(10);
 		assertArrayEquals(new int[] {10}, myIntList.getElements());
-		assertEquals(10, myIntList.getElementAt(0));
 		
+		assertEquals(10, myIntList.getElementAt(0));
+
+		int[] xs = myIntList.getElements();
+		xs[0] = 20;
+
+		assertEquals(10, myIntList.getElementAt(0));
+
+		
+
 		myIntList.add(20);
 		myIntList.add(30);
 		
